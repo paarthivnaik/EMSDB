@@ -1,0 +1,1 @@
+create table EventAmmount(EventAmmountID bigint primary Key Identity(1,1) not null,EventInfoID bigint foreign key references EventInfo(EventInfoID),Ammount money not null,CreatedBy bigint not null,CreatedOn datetime not null,ModifiedBy bigint,ModifiedOn DateTime,Status bit default(1) not null)
