@@ -1,0 +1,1 @@
+alter table EventInfo add IsConfirm bit not null default(0),IfFNF bit not null default(0)
