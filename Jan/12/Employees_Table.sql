@@ -1,0 +1,20 @@
+create table Employees(
+EmployeeID bigint primary Key not null identity(1,1),
+EmployeeCode AS ('RSEM'+right('0000'+CONVERT([varchar](4),[EmployeeID]),(4))) PERSISTED,
+FirstName varchar(100) not null,
+MiddleName varchar(100) null,
+SurName varchar(100) not null,
+Address varchar(400),
+MobileNumber varchar(15),
+AlternateMobile varchar(15),
+ProofID bigint,
+ProofValue varchar(100),
+UniqueID varchar(25),
+PackageAmmount money not null,
+Experience int not null default(0),
+Status bit default(1),
+CreatedBy bigint not null,
+CreatedOn datetime not null,
+ModifiedBy bigint null,
+ModifiedOn datetime null
+)
