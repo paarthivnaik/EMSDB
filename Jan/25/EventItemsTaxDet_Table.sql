@@ -1,0 +1,1 @@
+Create table EventItemsTaxDet(EventItemsTaxDetId bigint primary key Identity(1,1),EventInfoID bigint foreign key  references EventInfo(EventInfoID),Subtotal decimal not null,tax decimal,TaxAmount decimal,GrandTotal decimal not null)
